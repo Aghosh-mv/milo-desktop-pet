@@ -173,7 +173,8 @@ export function pose(name, t) {
       p.body = 0.15;
       break;
     case "side-view":
-      p.turn = 0.72;
+      p.turn = 0.85;
+      p.side = true;
       p.ll = s * 0.4;
       p.rl = -s * 0.4;
       p.la = -s * 0.4;
@@ -445,7 +446,13 @@ export function drawMilo(ctx, x, y, scale, name = "idle", t = 0, extra = {}) {
       ink,
     );
   }
-  if (!p.back) {
+  if (p.side) {
+    // Profile silhouette, one visible lens, ear, and a projecting nose.
+    path([[17, -4], [27, 3], [18, 6]], '#f9fcfa');
+    ctx.fillStyle = ink; ctx.beginPath(); ctx.roundRect(5, -4, 16, 11, 3); ctx.fill();
+    path([[-9, -2], [6, 0]]); ellipse(-10, 3, 3, 4, '#f9fcfa');
+    ctx.beginPath(); ctx.moveTo(13, 13); ctx.quadraticCurveTo(18, 15, 21, 10); ctx.stroke();
+  } else if (!p.back) {
     ctx.lineWidth = 1.8;
     path([
       [-20, -1],
