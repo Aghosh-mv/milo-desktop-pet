@@ -1,0 +1,3 @@
+import {loadImage,createCanvas} from '@napi-rs/canvas';
+import {animations} from '../src/rig.js';
+for(const name of animations){const img=await loadImage(`assets/sprites/${name}.png`);if(img.width!==2048||img.height!==768)throw Error(name+' dimensions');const c=createCanvas(2048,768),ctx=c.getContext('2d');ctx.drawImage(img,0,0);const data=ctx.getImageData(0,0,2048,768).data;for(let f=0;f<24;f++){let occupied=0,edge=0;for(let y=0;y<256;y++)for(let x=0;x<256;x++){const a=data[((Math.floor(f/8)*256+y)*2048+f%8*256+x)*4+3];if(a){occupied++;if(x<2||x>253||y<2||y>253)edge++}}if(!occupied||edge)throw Error(`${name} frame ${f}: occupied=${occupied}, edge=${edge}`)}}console.log('PASS: 720 nonempty transparent frames, no cell-edge clipping.');

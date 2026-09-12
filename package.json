@@ -1,0 +1,57 @@
+{
+  "name": "milo-desktop-pet",
+  "version": "0.1.0",
+  "description": "A springy little desktop companion with a live vector rig and 30 animations",
+  "author": "Milo contributors",
+  "license": "MIT",
+  "main": "electron/main.cjs",
+  "type": "module",
+  "scripts": {
+    "start": "electron .",
+    "preview": "vite --host 127.0.0.1",
+    "sprites": "node scripts/export.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "pack": "electron-builder --mac zip dmg --arm64",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "44.3.0",
+    "electron-builder": "26.15.3",
+    "vite": "^7.1.0",
+    "@napi-rs/canvas": "^0.1.80"
+  },
+  "build": {
+    "appId": "com.milo.desktop.pet",
+    "productName": "Milo",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "src/**",
+      "electron/**",
+      "index.html",
+      "assets/**",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.entertainment",
+      "target": [
+        "zip",
+        "dmg"
+      ],
+      "identity": "-",
+      "icon": "assets/icon.png"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Game"
+    }
+  }
+}

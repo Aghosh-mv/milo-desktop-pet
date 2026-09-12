@@ -1,0 +1,278 @@
+:root {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: oklch(24% 0.012 165);
+  background: oklch(97% 0.004 165);
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+select,
+input {
+  font: inherit;
+}
+button,
+select {
+  border: 1px solid oklch(84% 0.01 165);
+  background: transparent;
+  border-radius: 8px;
+  padding: 11px 14px;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  background: oklch(90% 0.035 165);
+}
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+canvas:focus-visible {
+  outline: 3px solid oklch(55% 0.12 165);
+  outline-offset: 3px;
+}
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  border-bottom: 1px solid oklch(87% 0.01 165);
+}
+header b {
+  font-size: 36px;
+  letter-spacing: -0.04em;
+}
+header b span {
+  font-size: 12px;
+  vertical-align: top;
+}
+header > span {
+  font-size: 13px;
+  color: oklch(44% 0.02 165);
+}
+header button {
+  margin-left: auto;
+  background: oklch(26% 0.015 165);
+  color: white;
+}
+#studio {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 48px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  min-height: 650px;
+}
+.stage {
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+  border-right: 1px solid oklch(87% 0.01 165);
+}
+.intro {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  pointer-events: none;
+}
+h1 {
+  font-size: 64px;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  margin: 0 0 20px;
+  font-weight: 550;
+}
+.intro p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: oklch(44% 0.02 165);
+}
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+}
+.caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 25px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: oklch(44% 0.02 165);
+  pointer-events: none;
+}
+.caption span:first-child {
+  color: oklch(29% 0.03 165);
+}
+aside {
+  padding: 40px 0 30px 28px;
+}
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.identity h2 {
+  font-size: 19px;
+  margin: 0;
+}
+.identity > span:last-child {
+  margin-left: auto;
+  font-size: 11px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  background: oklch(60% 0.12 165);
+  border-radius: 50%;
+}
+aside > p {
+  font-size: 12px;
+  color: oklch(44% 0.02 165);
+  line-height: 1.6;
+}
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 26px 0;
+}
+.actions button {
+  font-size: 12px;
+  padding: 12px 5px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 12px;
+  margin: 20px 0;
+}
+select {
+  width: 100%;
+}
+input[type="range"] {
+  accent-color: oklch(49% 0.1 165);
+  width: 100%;
+}
+.check {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.check input {
+  accent-color: oklch(49% 0.1 165);
+}
+.wide {
+  width: 100%;
+}
+.note {
+  margin-top: 20px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-top: 1px solid oklch(87% 0.01 165);
+  font-size: 11px;
+  color: oklch(44% 0.02 165);
+}
+body.overlay,
+body.overlay #studio {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+body.overlay header,
+body.overlay aside,
+body.overlay footer,
+body.overlay .intro,
+body.overlay .caption {
+  display: none;
+}
+body.overlay .layout,
+body.overlay .stage {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  min-height: 0;
+  border: 0;
+}
+@media (max-width: 760px) {
+  #studio {
+    padding: 0 20px;
+  }
+  header {
+    gap: 15px;
+  }
+  header > span {
+    display: none;
+  }
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .stage {
+    min-height: 530px;
+    border: 0;
+    border-bottom: 1px solid oklch(87% 0.01 165);
+  }
+  h1 {
+    font-size: 46px;
+  }
+  aside {
+    padding: 25px 0;
+  }
+  footer {
+    gap: 20px;
+    line-height: 1.5;
+  }
+  .caption {
+    font-size: 10px;
+    gap: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+}
+@media (min-width: 761px) {
+  header {
+    height: 80px;
+  }
+  .layout {
+    min-height: 620px;
+  }
+  .stage {
+    min-height: 620px;
+  }
+  aside {
+    padding-top: 25px;
+  }
+  aside label {
+    margin: 13px 0;
+  }
+  .actions {
+    margin: 18px 0;
+  }
+  h1 {
+    font-size: 58px;
+  }
+}

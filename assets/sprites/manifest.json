@@ -1,0 +1,163 @@
+{
+  "character": "Milo",
+  "cell": {
+    "width": 256,
+    "height": 256
+  },
+  "columns": 8,
+  "rows": 3,
+  "frames": 24,
+  "fps": 24,
+  "animations": [
+    {
+      "name": "idle",
+      "file": "idle.png",
+      "loop": true
+    },
+    {
+      "name": "walk-right",
+      "file": "walk-right.png",
+      "loop": true
+    },
+    {
+      "name": "walk-left",
+      "file": "walk-left.png",
+      "loop": true
+    },
+    {
+      "name": "run",
+      "file": "run.png",
+      "loop": true
+    },
+    {
+      "name": "sprint",
+      "file": "sprint.png",
+      "loop": true
+    },
+    {
+      "name": "jump",
+      "file": "jump.png",
+      "loop": false
+    },
+    {
+      "name": "fall",
+      "file": "fall.png",
+      "loop": true
+    },
+    {
+      "name": "land",
+      "file": "land.png",
+      "loop": false
+    },
+    {
+      "name": "bounce",
+      "file": "bounce.png",
+      "loop": true
+    },
+    {
+      "name": "swing",
+      "file": "swing.png",
+      "loop": true
+    },
+    {
+      "name": "wave",
+      "file": "wave.png",
+      "loop": true
+    },
+    {
+      "name": "dance",
+      "file": "dance.png",
+      "loop": true
+    },
+    {
+      "name": "sit",
+      "file": "sit.png",
+      "loop": true
+    },
+    {
+      "name": "sleep",
+      "file": "sleep.png",
+      "loop": true
+    },
+    {
+      "name": "stretch",
+      "file": "stretch.png",
+      "loop": true
+    },
+    {
+      "name": "yawn",
+      "file": "yawn.png",
+      "loop": true
+    },
+    {
+      "name": "look-left",
+      "file": "look-left.png",
+      "loop": true
+    },
+    {
+      "name": "look-right",
+      "file": "look-right.png",
+      "loop": true
+    },
+    {
+      "name": "look-up",
+      "file": "look-up.png",
+      "loop": true
+    },
+    {
+      "name": "look-down",
+      "file": "look-down.png",
+      "loop": true
+    },
+    {
+      "name": "side-view",
+      "file": "side-view.png",
+      "loop": true
+    },
+    {
+      "name": "top-view",
+      "file": "top-view.png",
+      "loop": true
+    },
+    {
+      "name": "back-view",
+      "file": "back-view.png",
+      "loop": true
+    },
+    {
+      "name": "spin",
+      "file": "spin.png",
+      "loop": true
+    },
+    {
+      "name": "somersault",
+      "file": "somersault.png",
+      "loop": false
+    },
+    {
+      "name": "slide",
+      "file": "slide.png",
+      "loop": true
+    },
+    {
+      "name": "skid",
+      "file": "skid.png",
+      "loop": true
+    },
+    {
+      "name": "float",
+      "file": "float.png",
+      "loop": true
+    },
+    {
+      "name": "dangle",
+      "file": "dangle.png",
+      "loop": true
+    },
+    {
+      "name": "celebrate",
+      "file": "celebrate.png",
+      "loop": true
+    }
+  ]
+}
